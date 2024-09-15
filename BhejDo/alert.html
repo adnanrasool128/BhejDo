@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Alert</title>
+    <style>
+        /* Style for custom alert dialog */
+        .custom-alert {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 9999;
+        }
+
+        .custom-alert p {
+            margin: 0;
+        }
+
+        .custom-alert button {
+            padding: 5px 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="showCustomAlert()">Show Custom Alert</button>
+
+    <!-- Custom alert dialog hidden by default -->
+    <div id="customAlert" class="custom-alert" style="display: none;">
+        <p>This is a custom alert!</p>
+        <button onclick="hideCustomAlert()">OK</button>
+    </div>
+
+    <script>
+        function showCustomAlert() {
+            document.getElementById('customAlert').style.display = 'block';
+        }
+
+        function hideCustomAlert() {
+            document.getElementById('customAlert').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
